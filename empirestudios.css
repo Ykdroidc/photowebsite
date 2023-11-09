@@ -1,0 +1,532 @@
+/*=========================================================
+	01 -> GENERAL
+===========================================================*/
+
+/*----------------------------*\
+	Typography
+\*----------------------------*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-image: url('img/pic1.jpg');
+    margin: 0;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    color: #2B2D42;
+    font-weight: 300;
+    margin: 0 0 10px;
+    font-size: 17px;
+  }
+
+  li{
+    color: #15161D;
+    font-size: 17px;
+  }
+  
+  h7{
+    color: #FBFBFC;
+  }
+  
+  a {
+    color: #E4E7ED;
+    font-weight: 500;
+    -webkit-transition: 0.2s color;
+    transition: 0.2s color;
+  }
+  
+  a:hover, a:focus {
+    color: aqua;
+    text-decoration: none;
+    outline: none;
+  }
+
+  svg{
+    color: #FBFBFC;
+  }
+  
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none
+  }
+  
+    .heading{
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+
+/*----------------------------*\
+	1-Navbar
+\*----------------------------*/
+    
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+.topnav a.active {
+  color: aqua;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+  .header{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+/*----------------------------*\
+	4-Image logo
+\*----------------------------*/
+  .header-logo{
+    margin-left: -18px;
+  }
+
+/*----------------------------*\
+	2-Responsive nav- 375 x 667          
+\*----------------------------*/
+@media screen and (max-width: 375px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .logo{
+   display: inline;
+  }
+}
+
+/*----------------------------*\
+	2.1-Responsive Nav 360 x 740
+\*----------------------------*/
+@media (max-width: 360px){
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .logo{
+   display: inline;
+  }
+
+}
+
+/*----------------------------*\
+	2.2-Responsive Nav 540 x 
+\*----------------------------*/
+
+/*----------------------------*\
+	2.3-Responsive Nav 412 x 
+\*----------------------------*/
+
+/*----------------------------*\
+	2.4-Responsive Nav 1042 x 600
+\*----------------------------*/
+
+/*----------------------------*\
+	2.5-Responsive Nav 1280 x 800
+\*----------------------------*/
+  
+/*----------------------------*\
+	3-Header
+\*----------------------------*/
+    .header {
+      height: 18em;
+      width: 100%;
+      padding: 60px;
+      color: white;
+      content: normal;
+      background-size: 45%;
+      background-position: center;
+  background-image: url('http://localhost/photowebsite/img/empirecam.jpg'); 
+}
+
+/*----------------------------*\
+	3.1-Responsive-Header 375 x 667
+\*----------------------------*/
+  @media screen and (max-width: 375px){
+    .header {
+      height: 8em;
+      width: 100%;
+      padding: 60px;
+      text-align: center;
+      content: normal;
+      background-size: 35%;
+      background-position: center;
+      background-image: url('http://localhost/photowebsite/img/empirecam.jpg');
+    }
+  }
+
+/*----------------------------*\
+	3.2-Responsive-Header 360 x 740
+\*----------------------------*/
+
+  @media (max-width: 360px){
+    .header {
+      height: 5em;
+      width: 100%;
+      padding: 60px;
+      margin-top: 3em;
+      text-align: center;
+      content: normal;
+      background-size: 35%;
+      background-position: center;
+      background-image: url('http://localhost/photowebsite/img/empirecam.jpg');
+    }
+  }
+
+
+/*----------------------------*\
+	5-Automated slideshow
+\*----------------------------*/
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 375px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*----------------------------*\
+	5.0-Responsive Automated slideshow
+\*----------------------------*/
+
+
+
+/*----------------------------*\
+	6-Inputs
+\*----------------------------*/
+
+/*-- Number input --*/
+
+.input-number {
+    position: relative;
+  }
+  
+  .input-number input[type="number"]::-webkit-inner-spin-button, .input-number input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-number input[type="number"] {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #E4E7ED;
+    background-color: #FFF;
+    padding: 0px 35px 0px 15px;
+  }
+  
+  .input-number .qty-up, .input-number .qty-down {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E4E7ED;
+    background-color: #FFF;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .input-number .qty-up {
+    right: 0;
+    top: 0;
+    border-bottom: 0px;
+  }
+  
+  .input-number .qty-down {
+    right: 0;
+    bottom: 0;
+  }
+  
+  .input-number .qty-up:hover, .input-number .qty-down:hover {
+    background-color: #E4E7ED;
+    color: lightgray;
+  }
+  
+  /*search result*/
+    .found{
+      color: blueviolet;
+    }
+  
+  /*-- Select input --*/
+  
+  .input-select {
+    padding: 0px 15px;
+    background: #FFF;
+    border: 1px solid #E4E7ED;
+    height: 40px;
+  }
+  
+  /*-- checkbox & radio input --*/
+  .input-radio, .input-checkbox {
+    position: absolute;
+    display: block;
+  }
+  
+  .input-radio input[type="radio"]:not(:checked), .input-radio input[type="radio"]:checked, .input-checkbox input[type="checkbox"]:not(:checked), .input-checkbox input[type="checkbox"]:checked {
+    position: absolute;
+    margin: 33em;
+    visibility: hidden;
+  }
+  
+  .input-radio label, .input-checkbox label {
+    font-weight: 500;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .input-radio input[type="radio"]+label span, .input-checkbox input[type="checkbox"]+label span {
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #E4E7ED;
+    background: #FFF;
+  }
+  
+  .input-radio input[type="radio"]+label span {
+    border-radius: 50%;
+  }
+  
+  .input-radio input[type="radio"]+label span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #FFF;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .input-checkbox input[type="checkbox"]+label span:after {
+    content: '✔';
+    position: absolute;
+    top: -2px;
+    left: 1px;
+    font-size: 10px;
+    color: #FFF;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .input-radio input[type="radio"]:checked+label span, .input-checkbox input[type="checkbox"]:checked+label span {
+    background-color: blueviolet;
+    border-color: lightgray;
+  }
+  
+  .input-radio input[type="radio"]:checked+label span:after {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .input-checkbox input[type="checkbox"]:checked+label span:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  .input-radio .caption, .input-checkbox .caption {
+    margin-top: 5px;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.3s max-height;
+    transition: 0.3s max-height;
+  }
+  
+  .input-radio input[type="radio"]:checked~.caption, .input-checkbox input[type="checkbox"]:checked~.caption {
+    max-height: 800px;
+  }
+  
+    input[type="radio"]:hover{
+   background: #bc2a8d;
+  }
+
+
+/*=========================================================
+	7 -> div columns for about us page
+===========================================================*/
+ 
+
+    /*div images side by side*/
+/* The grid: Three equal columns that floats next to each other */
+.grid-container{
+  margin-left: 12px;
+}
+
+.column1 {
+  float: left;
+  margin-left: 3em;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/*=========================================================
+	8 -> FOOTER
+===========================================================*/
+
+footer{
+  background: #000000;
+  color: #E4E7ED;
+  width: 100%;
+  height: 9em;
+}
+
+  li{
+    font-size: 15px;
+  }
+
+  .link-container{
+    text-align: center;
+   margin: 3px;
+  }
+
+    li{
+    margin: 10px;
+  }
+
+  i[class="fa fa-instagram"]{
+    color: #E4E7ED;
+  }
+
+  
